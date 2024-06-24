@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Crytid Tracker</title>
+<style>
+ .head {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #000000;
+  }
+
+ .body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #000000;
+    
+  }
+
+ .footer {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #000000;
+  }
+
+ .dropbtn {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100px;
+    height: 40px;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+ .dropbtn:hover,
+ .dropbtn:focus {
+    background-color: #0066ff;
+  }
+  
+ .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+ .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+ .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+ .dropdown a:hover {
+    background-color: #ddd;
+  }
+  
+ .show {
+    display: block;
+  }
+
+ .input {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 75px;
+    height: 15px;
+    margin-top: 5px;
+  }
+
+  #imageContainer {
+    text-align: center;
+  }
+
+ .canvas {
+    border: 2px solid black;
+  }
+
+  #myInput {
+    box-sizing: border-box;
+    background-image: url('searchicon.png');
+    background-position: 14px 12px;
+    background-repeat: no-repeat;
+    font-size: 16px;
+    padding: 14px 20px 12px 45px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+  }
+
+  #myInput:focus {
+    outline: 3px solid #ddd;
+  }
+
+ .dropbtn1 {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100px;
+    height: 40px;
+  }
+
+ .dropbtn1:hover,
+ .dropbtn1:focus {
+    background-color: #0066ff;
+  }
+
+ .myInput {
+    box-sizing: border-box;
+    background-image: url('searchicon.png');
+    background-position: 14px 12px;
+    background-repeat: no-repeat;
+    font-size: 16px;
+    padding: 14px 20px 12px 45px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+  }
+
+  #myInput:focus {
+    outline: 3px solid #ddd;
+  }
+
+ .dropdown1 {
+    position: relative;
+    display: inline-block;
+  }
+
+ .dropdown1-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border: 1px solid #ddd;
+  }
+
+ .dropdown1-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+ .dropdown1 a:hover {
+    background-color: #ddd;
+  }
+
+ .show1 {
+    display: block;
+  }
+
+.buttonmove {
+  --buttonx:350;
+  --buttony:370;
+
+ }
+ 
+ :root {
+  --button-height: 25px; /* Default height */
+  --button-width: 25px; /* Default width */
+}
+
+.dynamicButton {
+  height: var(--button-height);
+  width: var(--button-width);
+  display: show;
+}
+
+</style>
+</head>
+<body style="background-color:black;">
+  
+    <p style="font-size:25px;text-align:left;margin-left: 2%; color: white;">KEEP SAFE - They are out there!</p>
+
+    <p style="text-align:right; top: -50px; position: relative;margin-right: 1%;font-size:20px;">
+    <a href="/Users/zanejensen/Desktop/UTS/UTS Task Final/HTML.html">
+        <button style="font-size:20px;">Home</button>
+    </a>
+    
+    <a href="/Users/zanejensen/Desktop/UTS/UTS Task Final/Near.html">
+        <button style="font-size:20px;">     </button>
+    </a>
+    
+    <a href="/Users/zanejensen/Desktop/UTS/UTS Task Final/Info.html">
+        <button style="font-size:20px;">Info?</button>
+    </a>
+    </p>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Separating line -->
+    <hr width="100%" size="2" color="white" noshade style="margin-top: -3%;">
+
+    <br>
+    <br>
+    <br>
+      <iframe
+      width="1200"
+      height="700"
+      frameborder="0" 
+      style="border: 1px solid black; margin-left:5%;" 
+      allowfullscreen
+      src="https://en.wikipedia.org/wiki/Bigfoot">
+      </iframe>
+      <br>
+      <br>
+      <br>
+      <br>
+      <iframe
+      width="1200"
+      height="700"
+      frameborder="0" 
+      style="border: 1px solid black; margin-left:5%;" 
+      allowfullscreen
+      src="https://en.wikipedia.org/wiki/Loch_Ness_Monster">
+      </iframe>
+        <br>
+        <br>
+        <br>
+        <br>
+        <iframe
+        width="1200"
+        height="700"
+        frameborder="0" 
+        style="border: 1px solid black; margin-left:5%;" 
+        allowfullscreen
+        src="https://en.wikipedia.org/wiki/Mothman">
+        </iframe>
+        
+          <br>
+          <br>
+          <br>
+
+   
+    <script>
+        /* First array which has the names of the cryptids */
+        const cryptid_name = ["Bigfoot", "Nessy", "Mothman"];
+        document.getElementById("Name1").innerHTML = cryptid_name[0];
+        document.getElementById("Name2").innerHTML = cryptid_name[1];
+        document.getElementById("Name3").innerHTML = cryptid_name[2];
+
+        // When click toggle between hiding and showing the dropdown bar
+        function dropdown() {
+          document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+          if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+              }
+            }
+          }
+        }
+
+        /* Makes the right dropdown window close when it is not clicked on, issue also closes when one of the dropdown options is clicked */
+
+        // Get the canvas element and set its dimensions to match the window size
+        var canvas = document.getElementById("canvas");
+        canvas.width = 1000;
+        canvas.height = 500;
+
+        // Get the image element to be drawn on canvas
+        var img = document.getElementById("image");
+
+        // Get the drawing context of the canvas
+        var ctx = canvas.getContext("2d");
+
+        // Setup variables for tracking the image's position
+        var imageX = 100;
+        var imageY = -10;
+
+        // Event listeners for mouse button press and release
+        window.addEventListener("mousedown", down);
+        window.addEventListener("mouseup", up);
+
+        // Variable to track if the mouse button is currently pressed
+        var mouseDown = 0;
+
+        // Variables to store the current mouse position, x, y
+        var mouseX;
+        var mouseY;
+
+        // Function called when the mouse button is pressed
+        function down(event) {
+            // mouseDown is 1 indicating the button is pressed
+            mouseDown = 1;
+            // Store the initial mouse position
+            mouseX = event.x;
+            mouseY = event.y;
+        }
+
+// Function called when the mouse button is released
+function up(event) {
+    // Reset mouseDown to 0 indicating the button has been released
+    mouseDown = 0;
+    // Calculate the difference between the final and initial mouse positions
+    imageX += event.clientX - mouseX;
+    imageY += event.clientY - mouseY;
+    // Update the stored mouse position
+    mouseX = event.clientX;
+    mouseY = event.clientY;
+    // Update the dynamicButton's position based on the new image position
+    dynamicButton.style.left = (imageX + 260) + 'px'; // Adjusting the button's X position based on the image's X position
+    dynamicButton.style.top = (imageY + 355) + 'px'; // Adjusting the button's Y position based on the image's Y position
+  
+    dynamicButtonN.style.left = (imageX + 520) + 'px'; // Adjusting the button's X position based on the image's X position
+    dynamicButtonN.style.top = (imageY + 320) + 'px'; // Adjusting the button's Y position based on the image's Y position
+  
+    dynamicButtonM.style.left = (imageX + 350) + 'px'; // Adjusting the button's X position based on the image's X position
+    dynamicButtonM.style.top = (imageY + 370) + 'px'; // Adjusting the button's Y position based on the image's Y position
+  
+
+    // Call the main function to redraw the image
+    main();
+}
+
+        // Define the a and b variables which control x_size (a) and y_size (b) respectively
+        var a = 800;
+        var b = 600;
+
+        // Main function that draws the image onto the canvas
+        function main() {
+            // Clear the entire canvas
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            // Draw the image onto the canvas
+ctx.drawImage(img, imageX, imageY, a, b);
+
+
+}
+let buttonHeight = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--button-height'));
+let buttonWidth = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--button-width'));
+
+
+// Add event listener to the image button
+document.getElementById('divideButton').addEventListener('click', divide);
+
+
+// Add event listener to the image button
+document.getElementById('multiplyButton').addEventListener('click', multiply);
+
+// Correctly update the dynamicButton's position and size in the multiply function
+function multiply() {
+    a *= 1.25;
+    b *= 1.25;
+    buttonHeight *= 1.25;
+    buttonWidth *= 1.25;
+
+    // Correctly calculate and assign the new position
+    const dynamicButton = document.getElementById('dynamicButton');
+    dynamicButton.style.left = (imageX + a) + 'px'; // Correctly calculating the new left position
+    dynamicButton.style.top = (imageY + b) + 'px'; // Correctly calculating the new top position
+
+    const dynamicButtonM = document.getElementById('dynamicButtonM');
+    dynamicButtonM.style.left = (imageX + a) + 'px'; // Correctly calculating the new left position
+    dynamicButtonM.style.top = (imageY + b) + 'px'; // Correctly calculating the new top position
+
+    const dynamicButtoN = document.getElementById('dynamicButtonN');
+    dynamicButtonN.style.left = (imageX + a) + 'px'; // Correctly calculating the new left position
+    dynamicButtonN.style.top = (imageY + b) + 'px'; // Correctly calculating the new top position
+
+
+
+    // Update the CSS variables with the new values
+    document.documentElement.style.setProperty('--button-height', `${buttonHeight}px`);
+    document.documentElement.style.setProperty('--button-width', `${buttonWidth}px`);
+
+       // Hide the "o" button
+       document.getElementById('dynamicButton').style.display = 'none';
+        // Hide the "o" button
+        document.getElementById('dynamicButtonN').style.display = 'none';
+        // Hide the "o" button
+        document.getElementById('dynamicButtonM').style.display = 'none';
+
+    // Redraw the image and button if needed
+    main();
+}
+
+// Correctly update the dynamicButton's position and size in the divide function
+function divide() {
+    a /= 1.25;
+    b /= 1.25;
+    buttonHeight /= 1.25;
+    buttonWidth /= 1.25;
+
+    // Correctly calculate and assign the new position
+    const dynamicButton = document.getElementById('dynamicButton');
+    dynamicButton.style.left = (imageX + a) + 'px'; // Correctly calculating the new left position
+    dynamicButton.style.top = (imageY + b) + 'px'; // Correctly calculating the new top position
+
+    // Update the CSS variables with the new values
+    document.documentElement.style.setProperty('--button-height', `${buttonHeight}px`);
+    document.documentElement.style.setProperty('--button-width', `${buttonWidth}px`);
+   
+        // Hide the "o" button
+        document.getElementById('dynamicButton').style.display = 'none';
+        // Hide the "o" button
+        document.getElementById('dynamicButtonN').style.display = 'none';
+        // Hide the "o" button
+        document.getElementById('dynamicButtonM').style.display = 'none';
+
+    // Redraw the image and button if needed
+    main();
+}
+
+
+
+  function dropdown() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+      function changeCoordinates(index, isBigfootSelected = false) {
+    const coordinates = [
+        { a: 5000, b: 3500, imageX: -370, imageY: -810 },
+        { a: 5800, b: 4300, imageX: -2200, imageY: -650 },
+        { a: 5000, b: 3500, imageX: -370, imageY: -810 },
+    ];
+    a = coordinates[index].a;
+    b = coordinates[index].b;
+    imageX = coordinates[index].imageX;
+    imageY = coordinates[index].imageY;
+
+    // Show the dynamic button if Bigfoot was selected
+    if (isBigfootSelected) {
+        document.getElementById('dynamicButton').style.display = '';
+    } else {
+        document.getElementById('dynamicButton').style.display = 'none';
+    }
+
+    if (isNessySelected) {
+        document.getElementById('dynamicButtonN').style.display = '';
+    } else {
+        document.getElementById('dynamicButtonN').style.display = 'none';
+    }
+
+    if (isMothmanSelected) {
+        document.getElementById('dynamicButtonM').style.display = '';
+    } else {
+        document.getElementById('dynamicButtonM').style.display = 'none';
+    }
+
+    main();
+}
+
+// Update the onclick attribute of the Bigfoot link to pass true as the second argument to changeCoordinates
+document.getElementById("Name1").onclick = function() { changeCoordinates(0, true); };
+
+/* When the user clicks on the button,toggle between hiding and showing the dropdown content (use this bit to copy and paste the comment tags*/
+function Ddown() {
+  document.getElementById("myDropdown1").classList.toggle("show1");
+}
+
+function filterFunction() {
+  const input = document.getElementById("myInput");
+  const filter = input.value.toUpperCase();
+  const div = document.getElementById("myDropdown1");
+  const a = div.getElementsByTagName("a");
+  for (let i = 0; i < a.length; i++) {
+    txtValue = a[i].textContent || a[i].innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      a[i].style.display = "";
+    } else {
+      a[i].style.display = "none";
+    }
+  }
+}
+
+
+// Set the dynamic button's position
+var dynamicButton = document.getElementById('dynamicButton');
+
+// Set the dynamic button's position
+var dynamicButtonM = document.getElementById('dynamicButtonM');
+
+// Set the dynamic button's position
+var dynamicButtonN = document.getElementById('dynamicButtonN');
+
+var leftPosition = 350; // X-coordinate
+var topPosition = 345; // Y-coordinate
+
+var leftPositionN = 350; // X-coordinate
+var topPositionN = 345; // Y-coordinate
+
+var leftPositionM = 350; // X-coordinate
+var topPositionM = 345; // Y-coordinate
+
+// Apply the coordinates to the button
+dynamicButton.style.left = leftPosition + 'px';
+dynamicButton.style.top = topPosition + 'px';
+
+// Apply the coordinates to the button
+dynamicButtonM.style.left = leftPosition + 'px';
+dynamicButtonM.style.top = topPosition + 'px';
+
+// Apply the coordinates to the button
+dynamicButtonN.style.left = leftPosition + 'px';
+dynamicButtonN.style.top = topPosition + 'px';
+
+
+
+function navigateToPageB() {
+    window.location.href = "/Users/zanejensen/Desktop/UTS/UTS Task Final/HTML-Big.html";
+}
+
+function navigateToPageC() {
+    window.location.href = "/Users/zanejensen/Desktop/UTS/UTS Task Final/HTML-Ness.html";
+}
+
+// Function (M)
+function navigateToPageD() {
+    window.location.href = "/Users/zanejensen/Desktop/UTS/UTS Task Final/HTML-Moth.html";
+}
+</script>
+
+</body>
+</html>
